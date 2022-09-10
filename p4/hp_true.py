@@ -36,21 +36,19 @@ class titik:
 
 class jarak:
 
-    def __init__(self, z = 0, x = 0 , y = 0):
+    def __init__(self, z = 0):
         self.z = z
-        self.x = x
-        self.y = y
-        
+       
     def total(self,x1,y1,x2,y2):
-        self.x = x2 - x1
-        self.y = y2 - y1
-        self.z = self.x*2 + self.y*2
-        self.z = math.sqrt(self.z)
+        x      = (x2 - x1)**2
+        y      = (y2 - y1)**2
+        self.z = math.sqrt(x + y)
         print(self.z)
+        
 
 
-titik1 = titik(12, 7)
-titik2 = titik(10, 11)
+titik1 = titik(6, 6)
+titik2 = titik(10, 9)
 
 q = jarak()
 
